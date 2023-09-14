@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="calculator.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator</title>
+</head>
+<body>
+ 
+
+<div class="pl-24 max-w-sm mx-auto my-44 m-8 p-8 bg-violet-900
+rounded-2xl shadow-inner shadow-lg shadow-orange-300  font-semibold space-y-4">
+
+  <h1 class="pl-8 text-2xl text-white hover:text-orange-500 cursor-pointer ">
+    calculator
+  </h1>
+
+  <div class="space-x-12 text-2xl my-20 text-white">
+
+    <button onclick="
+    calculation += '1' ;
+    setInputValue();
+    console.log(calculation);" 
+     class=" transition transform hover:scale-150 delay-50">
+    1
+  </button>
+
+    <button onclick="
+    setInputValue();
+    calculation += '2';
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      2
+    </button>
+
+    <button onclick="
+    calculation += '3';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      3
+    </button>
+
+    <button onclick="
+    calculation += ' + ';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      +
+    </button>
+  </div>
+
+
+  <div class="space-x-12 text-xl text-white">
+    <button onclick="
+    calculation += '4';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      4
+    </button>
+
+    <button onclick="
+    calculation += '5';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      5
+    </button>
+
+    <button onclick="
+    calculation += '6';
+    setInputValue();
+    console.log(calculation);"
+     class="group pl-1 transition transform hover:scale-150 delay-50">
+      6
+    </button>
+
+    <button onclick="
+    calculation += ' - ';
+    setInputValue();
+    console.log(calculation);"
+     class="group pl-1 transition transform hover:scale-150 delay-50">
+      -
+    </button>
+  </div>
+
+
+  <div class="space-x-12 text-xl text-white">
+
+    <button onclick="
+    calculation += '7';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      7
+    </button>
+
+    <button onclick="
+    calculation += '8';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      8
+    </button>
+
+    <button onclick="
+    calculation += '9';
+    setInputValue();
+    console.log(calculation);"
+     class="group pl-1 transition transform hover:scale-150 delay-50">
+      9
+    </button>
+
+    <button onclick="
+    calculation += ' * ';
+    setInputValue();
+    console.log(calculation);"
+     class="group pl-1 transition transform hover:scale-150 delay-50">
+      *
+    </button>
+  </div>
+
+
+  <div class="space-x-10 text-xl text-white">
+    <button onclick = "
+    calculation = eval(calculation);
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      =
+    </button>
+
+    <button onclick="
+    calculation += '0';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      0
+    </button>
+
+    <button onclick="
+    calculation = '';
+    setInputValue();
+    console.log('cleared');"
+     class="group transition transform hover:scale-150 delay-50">
+      clear
+    </button>
+
+    <button onclick="
+    calculation += ' / ';
+    setInputValue();
+    console.log(calculation);"
+     class="group transition transform hover:scale-150 delay-50">
+      /
+    </button>
+  </div>
+
+  <!-- creating an input field to get the result -->
+  <input class="result text-center py-1 placeholder:text-center outline-none"
+   type="text" name="display" placeholder="answer" >
+
+<p class="text-sm text-left pt-8 text-white">created by sourav</p>   
+</div>
+
+<script>
+  let calculation = '';
+ 
+  </script>
+
+
+<script>
+  function setInputValue(){
+    var input = document.querySelector('.result');
+    input.value = calculation;
+  }
+  </script>
+  
+
+
+
+
+
+</body>
+</html>
